@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
   schedule: 
-    - cron: "*/5 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   print:
@@ -16,7 +16,8 @@ jobs:
         run: |-
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
-          echo "$(date -u)\n" >> README.md
+          echo "$(date -u)" >> README.md
+          echo "" >> README.md
           git add README.md
           git commit -m "added date $(date -u)"
           git push
