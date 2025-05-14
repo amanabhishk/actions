@@ -2,7 +2,7 @@ name: timed
 
 on:
 	schedule: 
-    - cron: */6 * * * *
+    - cron: "*/6 * * * *"
 
 jobs:
   print:
