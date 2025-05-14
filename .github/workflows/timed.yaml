@@ -19,4 +19,4 @@ jobs:
           echo $(date -u) >> README.md
           git add README.md
           git commit -m "added date $(date -u)"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+          git push
